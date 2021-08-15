@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.block {
+    box-sizing: border-box;
+    text-align: center;
+    display: table;
+    opacity: .9;
+    width: 100%;
+    border-radius: 1rem;
+    background: linear-gradient(-25deg, #f0f0f0, #ffffff);
+    border: 0;
+    padding: 2rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(1px 1px 10px black);
+}
+
+.welcomeBlock {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 1%;
+    font-size: 2rem;
+    text-shadow: 0px 4px 4px #292929;
+    border-bottom: 2px solid rgb(207, 207, 207);
+    border-bottom-style:inset;
+}
+
+.logOut{
+    display: block;
+    min-width: max-content;
+    padding: 5px 10px;
+    line-height: 2rem;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 2rem;
+    border: 2px solid #ffffff;
+    color: rgb(255, 255, 255);
+    font-size: 50%;
+    font-family: arial;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    transition: all .35s;
+    cursor: pointer;
+  }
+  
+  .logOut:before,
+  .logOut:after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background: #ffffff;
+    z-index: -1;
+    transition: all .35s;
+  }
+  
+  .logOut:before{
+    opacity: .5;
+  }
+  
+  .logOut:after{
+    transition-delay: .2s;
+  }
+  
+  .logOut:hover{
+    color: #000;
+  }
+  
+  .logOut:hover:before,
+  .logOut:hover:after{
+    top: 0;
+  }
+
+  .totalMoney {
+    font-size: 2rem;
+    color: #000;
+}
+
+.totalMoney span {
+    margin-left: 1rem;
+}
+
+.budgetBlock {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.newTransaction input[type="text"],
+.newTransaction select {
+    background: transparent;
+    text-align: center;
+    border-radius: 2rem;
+    width: 100%;
+    margin-bottom: 2%;
+    box-sizing: border-box;
+    border: 1px solid #9e9e9e;
+    font-size: 1rem;
+    padding: 8px;
+}
+
+.newTransaction input[type="text"]:focus,
+.newTransaction select:focus {
+    outline: none;
+}
+
+.newTransaction input[name="price"] {
+    margin-left: 2%;
+}
+
+.inputGroup {
+    display: flex;
+    justify-content: center;
+}
+
+.addTransaction {
+    text-align: center;
+    color: #fff;
+    border-radius: 2rem;
+    background-color: #425f9c;
+    border: 0;
+    margin: 1rem 0 0;
+    padding: 1rem 4rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.addTransaction:hover {
+    background-color: #274177;
+}
+
+.addTransaction:focus {
+    outline: none;
+}
+
+.lastesTransactions {
+    background: linear-gradient(-25deg, #f0f0f0, #ffffff);
+    width: 60%;
+    max-height: 70vh;
+    opacity: .9;
+    border-radius: 1rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 1.2rem;
+    filter: drop-shadow(1px 3px 10px black);
+}
+
+.lastesTransactions ul {
+    padding: 1rem;
+}
+
+.lastesTransactions p {
+    background: #f0f0f0;
+    margin: 0;
+    padding: .5rem 1rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+  }
+
+p {
+    font-weight: bold;
+    padding: 0 1rem 1rem;
+    margin: 0;
+    font-size: 1.2rem;
+    border-bottom: 2px solid rgb(207, 207, 207);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    border-bottom: 1px solid #ddd;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li:last-child {
+    border-bottom: 0;
+    padding: 5px 0 0;
+}
+
+.expense {
+    color:#e40000;
+    font-weight: bold;
+}
+
+.income {
+    color:#006118;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1000px) {
+    .budgetBlock {
+        flex-direction: column;
+    }
+
+    .lastesTransactions {
+        width: 100%;
+    }
+
+    .welcomeBlock {
+        padding-bottom: 2%;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+
+    .lastesTransactions {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 2100px) {
+
+    .lastesTransactions {
+        width: 80%;
+    }
+}
