@@ -1,6 +1,6 @@
-# Simple  Budget App
+# Budget App
 
-Simple app to control your incomes and expenses.
+Simple app in React, to control your incomes and expenses.
 After entering the website, we create an account and log in. Information about our account and all data we enter is saved in Google Firebase.
 In the application, we can add our incomes and expenses.
 
