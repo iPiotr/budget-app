@@ -23,6 +23,7 @@ class Tracker extends Component {
             [input]: e.target.value !=="0" ? e.target.value : ""
         })
     }
+
     addNewTransaction = () => {
         const {
             transactionName,
@@ -42,7 +43,6 @@ class Tracker extends Component {
                 price: price,
                 user_id: currentUID
             })
-
             
 
             fire.database().ref('Transactions/' + currentUID).push({
@@ -52,7 +52,6 @@ class Tracker extends Component {
                 price: price,
                 user_id: currentUID
             }).then((data) => {
-                console.log('succes');
                 this.setState({
                     transactions: BackUpState,
                     money: transactionType === 'income' ? money + parseFloat(price) : money - parseFloat(price),
@@ -64,6 +63,13 @@ class Tracker extends Component {
                     console.log('error', error)
                 });
         }
+    }
+
+    deleteTransaction(){
+        const { currentUID } = this.state;
+
+        fire.database().ref('Transactions/' + currentUID).remove();
+        window.location.reload(false)
     }
 
     componentWillMount() {
@@ -130,8 +136,9 @@ class Tracker extends Component {
                                     value={this.state.transactionType}
                                     onChange={this.handleChange('transactionType')}>
                                     <option value="0">Type</option>
-                                    <option value="expense">Expense</option>
                                     <option value="income">Income</option>
+                                    <option value="expense">Expense</option>
+
                                 </select>
                                 <input 
                             placeholder="Price"
@@ -151,7 +158,7 @@ class Tracker extends Component {
                     </div>
                 </div>
                 <div className="lastesTransactions">
-                <p>Lastes Transactions</p>
+                <div className="lastesText"><span>Lastes Transactions</span> <button className="reset" onClick={() => this.deleteTransaction()}>Reset</button></div> 
                     <ul>
                         {
                             Object.keys(this.state.transactions).map((id) => (
@@ -163,8 +170,7 @@ class Tracker extends Component {
                             ))
                         }
                     </ul>
-                </div>
-                        
+                </div>    
             </div>
             </>
         );

@@ -4,7 +4,6 @@ import fire from '../config/Fire';
 import Login from './Forms/Login';
 import Register from './Forms/Register';
 import Tracker from "./Tracker/Tracker";
-import Spinner from '../assets/loader.gif'
 
 
 
@@ -35,7 +34,6 @@ export default class Main extends Component {
         this.setState({
             formSwitcher: action === 'register' ? true : false
         });
-        console.log(action);
     }
 
     render() {
@@ -46,7 +44,7 @@ export default class Main extends Component {
             return (
                 <div className="mainBlock">
                     <div className="Spinner">
-                        <img src={Spinner} alt="Spinner" className="imgSpinner"/>
+                        <p>Loading...</p>
                     </div>
                 </div>
             )

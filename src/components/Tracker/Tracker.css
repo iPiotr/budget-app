@@ -35,6 +35,10 @@
     border-bottom-style:inset;
 }
 
+.delete {
+
+}
+
 .logOut{
     display: block;
     min-width: max-content;
@@ -52,10 +56,10 @@
     background: transparent;
     transition: all .35s;
     cursor: pointer;
-  }
+}
   
-  .logOut:before,
-  .logOut:after{
+.logOut:before,
+.logOut:after{
     position: absolute;
     content: "";
     width: 100%;
@@ -65,26 +69,39 @@
     background: #ffffff;
     z-index: -1;
     transition: all .35s;
-  }
+}
   
-  .logOut:before{
+.logOut:before{
     opacity: .5;
-  }
+}
   
-  .logOut:after{
+.logOut:after{
     transition-delay: .2s;
-  }
+}
   
-  .logOut:hover{
+.logOut:hover{
     color: #000;
-  }
+}
   
-  .logOut:hover:before,
-  .logOut:hover:after{
+.logOut:hover:before,
+.logOut:hover:after{
     top: 0;
-  }
+}
 
-  .totalMoney {
+.reset {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 2rem;
+    border: 2px solid #000000;
+    color: #696969;
+    font-size: 1rem;
+    background: transparent;
+    cursor: pointer;
+}
+
+.totalMoney {
     font-size: 2rem;
     color: #000;
 }
@@ -166,21 +183,23 @@
     padding: 1rem;
 }
 
-.lastesTransactions p {
+.lastesText {
     background: #f0f0f0;
     margin: 0;
     padding: .5rem 1rem;
     position: -webkit-sticky;
     position: sticky;
     top: -1px;
-  }
+    border-bottom: 2px solid rgb(207, 207, 207);
+    display: flex;
+    justify-content: space-between;
+}
 
-p {
+.lastesText span {
     font-weight: bold;
-    padding: 0 1rem 1rem;
+    padding: 10px 0;
     margin: 0;
     font-size: 1.2rem;
-    border-bottom: 2px solid rgb(207, 207, 207);
 }
 
 ul {
@@ -209,6 +228,12 @@ ul li:last-child {
 .income {
     color:#006118;
     font-weight: bold;
+}
+
+li span {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 1000px) {
