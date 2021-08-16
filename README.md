@@ -10,11 +10,13 @@ In the application, we can add our incomes and expenses.
 - Add incomes and expenses
 - List latest transactions
 - Balance
+- Reset data
 
+Try online: https://ipiotr.github.io/budget-app/
 
 ![Login](https://imgur.com/YXEGWmh.png)
 
-![App](https://imgur.com/x5Z8FKn.png)
+![App](https://imgur.com/k86zWNV.png)
 
 ## Available Scripts
 
