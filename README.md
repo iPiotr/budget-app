@@ -12,7 +12,7 @@ In the application, we can add our incomes and expenses.
 - Balance
 - Reset data
 
-Try online: https://ipiotr.github.io/budget-app/
+Online: https://ipiotr.github.io/budget-app/
 
 ![Login](https://imgur.com/YXEGWmh.png)
 
